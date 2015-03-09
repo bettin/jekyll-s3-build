@@ -5,11 +5,11 @@ Jekyll build tool to build, compress, and deploy to AWS S3. Hoping to keep this 
 ##Dependancies
 
 * [s3cmd](https://github.com/s3tools/s3cmd)
-* S3 Bucked configured for Static Website Hosting
+* S3 bucket configured for Static Website Hosting
 
 ## Installation
 
-Run jekyll-s3-build.sh from the Jekyll root folder (assuming _site.
+Run jekyll-s3-build.sh from the Jekyll root folder where build goes to ~/_site.
 
 ## Usage
 
