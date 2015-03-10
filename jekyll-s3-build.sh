@@ -34,9 +34,9 @@ echo -e "> Done.\n"
 
 echo "Sync to Amazon S3 Bucket: $S3_BUCKET"
 # Sync gzipped html/css/js files, which require special header
-s3cmd sync --progress -M --acl-public --delete-removed --add-header 'Cache-Control: max-age=600' --add-header 'Content-Encoding:gzip' _site/ $S3_BUCKET --exclude '*.*' --include '*.html' --include '*.js' --include '*.css'
+s3cmd sync --progress -M --acl-public --no-preserve --delete-removed --add-header 'Cache-Control: max-age=600' --add-header 'Content-Encoding:gzip' _site/ $S3_BUCKET --exclude '*.*' --include '*.html' --include '*.js' --include '*.css'
 # Sync other files (not html/js/css)
-s3cmd sync --progress -M --acl-public --delete-removed --add-header 'Cache-Control: max-age=600' --exclude '*.html' --exclude '*.js' --exclude '*.css' --exclude '*.sh' --exclude '.DS_Store' --exclude 'README.md' _site/ $S3_BUCKET
+s3cmd sync --progress -M --acl-public --no-preserve --delete-removed --add-header 'Cache-Control: max-age=600' --exclude '*.html' --exclude '*.js' --exclude '*.css' --exclude '*.sh' --exclude '.DS_Store' --exclude 'README.md' _site/ $S3_BUCKET
 echo '> Done.'
 
 exit 0
