@@ -1,5 +1,11 @@
 #!/bin/bash
-# File name: jekyll-s3-build.sh
+#
+# jekyll-s3-build: Build Jekyll and sync to S3
+# https://github.com/bettin/jekyll-s3-build
+#
+# (c) 2015 Chris Bettin
+# MIT LICENSE
+#
 
 # Variables
 S3_BUCKET="s3://$1"

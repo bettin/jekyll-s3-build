@@ -1,6 +1,6 @@
 # jekyll-s3-build
 
-Jekyll build tool to build, compress, and deploy to AWS S3. Hoping to keep this simple with only has one requirement.
+Jekyll build tool to build, compress, and deploy to AWS S3. Hoping to keep this simple with only one requirement.
 
 ##Dependancies
 
@@ -23,4 +23,4 @@ Run jekyll-s3-build.sh from the Jekyll root folder where build goes to ~/_site.
 ## Todo
 
 * Add CloudFront invalidation
-* Smarter Cache headers
+* Smarter cache headers
